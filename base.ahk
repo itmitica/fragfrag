@@ -1,7 +1,6 @@
 #NoEnv
 #SingleInstance force
 
-SetWorkingDir %A_ScriptDir%
 SetBatchLines, -1
 FileEncoding, UTF-8
 

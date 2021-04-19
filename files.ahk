@@ -1,5 +1,8 @@
-#Include base.ahk
-#Include lib.ahk
+#Include %A_ScriptDir%\base.ahk
+#Include %A_ScriptDir%\lib.ahk
+
+vWorkingDir := A_Args[1]
+SetWorkingDir, %vWorkingDir%
 
 vStepsFiles := { 1_cleanup:              1
                , 2_createdistdir:        0

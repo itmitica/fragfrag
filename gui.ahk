@@ -1,15 +1,29 @@
 ;Autoexec:
-    #Include lib.ahk
+    #Include %A_ScriptDir%\lib.ahk
     global vScriptName
+    global vWorkingDir
 
     Gui, Font, s10,
-    Gui, Add, Edit, y+10 w620 h420 vLog
-    Gui, Add, Text, Section, Choose script: 
-    Gui, Add, DropDownList, ys gRunScript, template|files|
-    Gui, Add, Button, gRun ys, Run
+    Gui, Add, Text, Section, Select directory: 
+    Gui, Add, Button, gDir , ... 
+    Gui, Add, Text, w320 r2 vCDir, No directory is selected...
+    Gui, Add, Text, ys Section, Select script: 
+    Gui, Add, DropDownList, gRunScript w280, template|files|
+    Gui, Add, Button, gRun, Run
+    Gui, Add, Edit, xm Section w620 h380 vLog
 
     Gui, Show, w640 h480, Script Logger
     GuiControl, Focus, Close
+Return
+
+Dir:
+    FileSelectFolder, vWorkingDir, , 3
+    if vWorkingDir =
+        MsgBox, No directory was selected...
+    else {
+        GuiControlGet, CDir
+        GuiControl, , CDir, %vWorkingDir%
+    }
 Return
 
 RunScript:
@@ -27,13 +41,15 @@ GuiClose:
 Return
 
 Runner() {
+    global vWorkingDir
+
     if vScriptName {
         Gui, 1:+Disabled
         ClearLogger()
 
         Logger("[ " . Timer() . " ]" . " script """ . vScriptName . """ running...`n")
-        RunWait autohk %vScriptName%.ahk
-        FileRead, Contents, %vScriptName%.log 
+        RunWait autohk %A_ScriptDir%\%vScriptName%.ahk %vWorkingDir%
+        FileRead, Contents, %vWorkingDir%\%vScriptName%.log 
         Logger(Contents)
         time := Timer()
         Logger("[ " . Timer() . " ]" . " script """ . vScriptName . """ finished`n")
