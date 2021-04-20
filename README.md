@@ -24,7 +24,7 @@ Define fragmentation points in the `index.html` template file: insert `fragfrag(
 #### How to sequence the numbers
 I separate template content in contexts: doc, head, body. I further separate each context into smaller contexts: meta, title, css, js, main content. And so on, until I have defined a context structure fit for my purpose. Hence, each template file could have a different context structure.
 
-I use hundreds as stepping points from the previous context: 100, 200 and so on. I use tens as stepping points for fragments inside a context so that I can add fragments in between later. I start a context from ten and end a context with ninety: e.g. 110 to 190. This way I can add fragments to that respective context, before its very beginning or its very ending, when needed: e.g. 105 or 195.
+I use hundreds as stepping points from the previous context: 100, 200 and so on. I use tens as stepping points for fragments inside a context so that I can add fragments in between later. I start a context from ten and end a context with ninety: e.g. 110 to 190. This way I can add fragments to that respective context, before its very beginning or after its very ending, when needed: e.g. 105 or 195.
 
 If contexts are nested, then for the outer nested context it's not possible to use the same hundreds for its end. So I just step up on the hundreds to point out the new context switch, from the inner context to the outer context, and then put directly the ninety: e.g. [110 [210 220 290] 390].
 
