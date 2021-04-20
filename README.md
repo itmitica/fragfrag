@@ -1,16 +1,39 @@
+![fragfrag logo](fragfrag-logo.svg "fragfrag logo")
+
 # fragfrag
-A utility to cut a file into fragments, modify some of the fragments and/or add new fragments at a new location and then reassemble into a new file at the new location.
+Split a file into fragments. Copy the fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location.
 
-## Phase one
-Add new fragmentation points to a file located in the `template` directory, e.g. `fragfrag(100_some_description)` to `index.html`.
+## A picture before the thousand words
+![A picture](fragfrag-a-picture.svg "A picture")
 
-## Phase two
-Cut the file into fragments based on those fragmentation points, e.g. `100_some_description.html` in `template\_fragfrag` directory.
+## How to organize the files
+Create a new directory with a `template` subdirectory in it and a `files\src` subdirectory structure as well. Copy the `index.html` template file in the `template` subdirectory.
 
-## Phase three
-Copy and modify some of the fragments into a new `_fragfrag` location in the `files\src` directory, e.g. `files\src\about\_fragfrag\100_some_description.html`.
+## How to split into fragments
+### Fragmentation points
+Define fragmentation points in the `index.html` template file: insert `fragfrag(number_description)` lines in the template file. This is up to you, you set the rules of fragmentation. `number` is required. Any numbered sequences will do, but keep an ascending order. `description` is not required but may be really useful with recognizing the content in the file fragment.
 
-Optionally, add new fragments in the new `_fragfrag` location in the `files` directory, e.g. `files\src\about\_fragfrag\110_additional_description.html`.
+### Fragmentate
+Run `AutoHotkeyU32.exe path/to/fragfrag/template.ahk path/to/project` to generate a `_fragfrag` directory and the file fragments from the template file.
 
-## Phase four
-Reassemble fragments from the `template\_fragfrag` directory and fragments from each `_fragfrag` location in `files\src` directory, into a new file in the `files\dist` location, e.g. `files\dist\about\index.html`.
+### GUI
+You can also run `AutoHotkeyU32.exe path/to/fragfrag/gui.ahk`, choose the working `project` directory path, select the `template` option from the script list and press the `Run` button.
+
+You can also copy `AutoHotkeyU32.exe` as `path/to/fragfrag/gui.exe` and duble click `gui.exe`. It will run `gui.ahk` by default.
+
+### U64
+You can use `AutoHotkeyU64.exe` instead, if you want.
+
+## How to reassemble fragments
+### Copy, modify, add fragments
+Copy file fragments that will differ in content to a `_fragfrag` location in `path/to/project/files/scr` directory. For example, to `path/to/project/files/src/_fragfrag`. Add/remove content to each fragment. This is, again, up to you. You control the rules of fragmentation, so you control the rules of substitution as well.
+
+### Add new fragments
+If you need, add new numbered fragments in between the existing fragments, if needed.
+
+### Reassemble
+Run `AutoHotkeyU32.exe path/to/fragfrag/files.ahk path/to/project` to generate a `dist` directory and new `index.html` files, from the template fragments, and from the fragments you chose to modify in the `_fragfrag` directory from each subdirectory in `files/src`.
+
+## A picture after a thousand words
+### Workflow concept
+![Concept](fragfrag-concept.svg "Concept")
