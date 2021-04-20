@@ -52,3 +52,5 @@ Optionally, add new numbered fragments in between the existing fragments, if the
 
 ### Reassemble
 Run `AutoHotkeyU32.exe path/to/fragfrag/files.ahk path/to/project` to generate a `dist` directory and new `index.html` files, using the template fragments, and the modified or added fragments in the `_fragfrag` directory from each subdirectory in `files/src`.
+
+![fragfrag gui](fragfrag-gui-files.png "fragfrag gui")
