@@ -4,6 +4,11 @@
 ## The problem
 How do I break a template file into pieces and use those pieces to assemble other files?
 
+## A picture before a thousand words
+![A picture](fragfrag-a-picture.svg "A picture")
+
+Check the `samples` directory.
+
 ## The workflow
 Split a file into fragments. Copy some of those fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location. Repeat to create as many files are needed using the template fragments.
 
@@ -45,8 +50,3 @@ Add new numbered fragments in between the existing fragments, if needed.
 
 ### Reassemble
 Run `AutoHotkeyU32.exe path/to/fragfrag/files.ahk path/to/project` to generate a `dist` directory and new `index.html` files, from the template fragments, and from the fragments you chose to modify in the `_fragfrag` directory from each subdirectory in `files/src`.
-
-## A picture after a thousand words
-![A picture](fragfrag-a-picture.svg "A picture")
-
-Check the `samples` directory.
