@@ -21,6 +21,8 @@ You can also run `AutoHotkeyU32.exe path/to/fragfrag/gui.ahk`, choose the workin
 
 You can also copy `AutoHotkeyU32.exe` as `path/to/fragfrag/gui.exe` and duble click `gui.exe`. It will run `gui.ahk` by default.
 
+![fragfrag gui](fragfrag-gui.png "fragfrag gui")
+
 ### U64
 You can use `AutoHotkeyU64.exe` instead, if you want.
 
