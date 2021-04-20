@@ -15,9 +15,9 @@ Split a file into fragments. Copy some of those fragments to a new location and 
 ![Concept](fragfrag-concept.svg "Concept")
 
 ## How to organize the files
-Create a new directory with a `template` subdirectory in it and a `files\src` subdirectory structure as well. Copy the `index.html` template file in the `template` subdirectory.
+Create a new directory, e.g. `project`, with a `template` subdirectory in it and a `files\src` subdirectory structure as well. Copy your `index.html` template file in the `template` subdirectory.
 
-## How to split into fragments
+## How to split the template into fragments
 ### Fragmentation points
 Define fragmentation points in the `index.html` template file: insert `fragfrag(number_description)` lines in the template file. This is up to you, you set the rules of fragmentation. `number` is required. Any numbered sequences will do, but keep an ascending order. `description` is not required but may be really useful with recognizing the content in the file fragment.
 
@@ -41,12 +41,14 @@ You can also copy `AutoHotkeyU32.exe` as `path/to/fragfrag/gui.exe` and duble cl
 ### U64
 You can use `AutoHotkeyU64.exe` instead, if you want.
 
-## How to reassemble fragments
+## How to reassemble fragments into different files
 ### Copy, modify, add fragments
-Copy file fragments that will differ in content to a `_fragfrag` location in `path/to/project/files/scr` directory. For example, to `path/to/project/files/src/_fragfrag`. Add/remove content to each fragment. This is, again, up to you. You control the rules of fragmentation, so you control the rules of substitution as well.
+Copy file fragments that will differ in content from the fragments in the template file, to `_fragfrag` locations in `path/to/project/files/scr` directory. For example, to `path/to/project/files/src/_fragfrag` for the root `index.html` file and `path/tp/project/files/src/about/_fragfrag` for the `about/index.html` file.
+
+Add/remove content to fragments. This is, again, up to you. You control the rules of fragmentation, so you control the rules of substitution as well.
 
 ### Add new fragments
-Add new numbered fragments in between the existing fragments, if needed.
+Optionally, add new numbered fragments in between the existing fragments, if the fragments from the template file are not fit for the content you wish to add.
 
 ### Reassemble
-Run `AutoHotkeyU32.exe path/to/fragfrag/files.ahk path/to/project` to generate a `dist` directory and new `index.html` files, from the template fragments, and from the fragments you chose to modify in the `_fragfrag` directory from each subdirectory in `files/src`.
+Run `AutoHotkeyU32.exe path/to/fragfrag/files.ahk path/to/project` to generate a `dist` directory and new `index.html` files, using the template fragments, and the modified or added fragments in the `_fragfrag` directory from each subdirectory in `files/src`.
