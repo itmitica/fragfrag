@@ -1,7 +1,7 @@
 ![fragfrag logo](fragfrag-logo.svg "fragfrag logo")
 
 # fragfrag
-Split a file into fragments. Copy the fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location.
+Split a file into fragments. Copy fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location.
 
 ## A picture before the thousand words
 ![A picture](fragfrag-a-picture.svg "A picture")
@@ -29,7 +29,7 @@ You can use `AutoHotkeyU64.exe` instead, if you want.
 Copy file fragments that will differ in content to a `_fragfrag` location in `path/to/project/files/scr` directory. For example, to `path/to/project/files/src/_fragfrag`. Add/remove content to each fragment. This is, again, up to you. You control the rules of fragmentation, so you control the rules of substitution as well.
 
 ### Add new fragments
-If you need, add new numbered fragments in between the existing fragments, if needed.
+Add new numbered fragments in between the existing fragments, if needed.
 
 ### Reassemble
 Run `AutoHotkeyU32.exe path/to/fragfrag/files.ahk path/to/project` to generate a `dist` directory and new `index.html` files, from the template fragments, and from the fragments you chose to modify in the `_fragfrag` directory from each subdirectory in `files/src`.
