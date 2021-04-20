@@ -6,6 +6,7 @@ How do I break a template file into pieces and use those pieces to assemble othe
 
 ## The workflow
 Split a file into fragments. Copy some of those fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location. Repeat to create as many files are needed using the template fragments.
+
 ![Concept](fragfrag-concept.svg "Concept")
 
 ## How to organize the files
