@@ -1,18 +1,18 @@
-![fragfrag logo](fragfrag-logo.png "fragfrag logo")
+![fragfrag logo](screens/fragfrag-logo.png "fragfrag logo")
 
 # fragfrag
 ## The problem
 How do I break a template file into pieces and use those pieces to assemble other files?
 
 ## A picture before a thousand words
-![A picture](fragfrag-a-picture.png "A picture")
+![A picture](screens/fragfrag-a-picture.png "A picture")
 
 Check the `samples` directory.
 
 ## The workflow
 Split a file into fragments. Copy some of those fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location. Repeat to create as many files are needed using the template fragments.
 
-![Concept](fragfrag-concept.png "Concept")
+![Concept](screens/fragfrag-concept.png "Concept")
 
 ## How to organize the files
 Create a new directory, e.g. `project`, with a `template` subdirectory in it and a `files\src` subdirectory structure as well. Copy your `index.html` template file in the `template` subdirectory.
@@ -37,7 +37,7 @@ Run `AutoHotkeyU32.exe c:\fragfrag\template.ahk c:\project` to generate a `c:\pr
 You can also run `AutoHotkeyU32.exe c:\fragfrag\gui.ahk`, choose the working `c:\project` directory path, select the `template` option from the script list and press the `Run` button.
 You can also copy `AutoHotkeyU32.exe` as `c:\fragfrag\gui.exe` and duble click `gui.exe`. It will run `gui.ahk` by default.
 
-![fragfrag gui](fragfrag-gui.png "fragfrag gui")
+![fragfrag gui](screens/fragfrag-gui.png "fragfrag gui")
 
 ### U64
 You can use `AutoHotkeyU64.exe` instead, if you want.
@@ -54,4 +54,4 @@ Optionally, add new numbered fragments in between the existing fragments, if the
 ### Reassemble
 Run `AutoHotkeyU32.exe c:\fragfrag\files.ahk c:\project` to generate a `dist` directory and new `index.html` files, using the template fragments, and the modified or added fragments in the `_fragfrag` directory from each subdirectory in `c:\project\files\src`.
 
-![fragfrag gui](fragfrag-gui-files.png "fragfrag gui")
+![fragfrag gui](screens/fragfrag-gui-files.png "fragfrag gui")
