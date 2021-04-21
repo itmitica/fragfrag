@@ -1,18 +1,18 @@
-![fragfrag logo](fragfrag-logo.svg "fragfrag logo")
+![fragfrag logo](fragfrag-logo.png "fragfrag logo")
 
 # fragfrag
 ## The problem
 How do I break a template file into pieces and use those pieces to assemble other files?
 
 ## A picture before a thousand words
-![A picture](fragfrag-a-picture.svg "A picture")
+![A picture](fragfrag-a-picture.png "A picture")
 
 Check the `samples` directory.
 
 ## The workflow
 Split a file into fragments. Copy some of those fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location. Repeat to create as many files are needed using the template fragments.
 
-![Concept](fragfrag-concept.svg "Concept")
+![Concept](fragfrag-concept.png "Concept")
 
 ## How to organize the files
 Create a new directory, e.g. `project`, with a `template` subdirectory in it and a `files\src` subdirectory structure as well. Copy your `index.html` template file in the `template` subdirectory.
