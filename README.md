@@ -15,7 +15,9 @@ Check the `samples` directory.
 ## The workflow
 Split a file into fragments. Copy some of those fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location. Repeat to create as many files are needed using the template fragments.
 
-![Concept](screens/fragfrag-concept.png "Concept")
+<p align="center">
+  <img width="480" height="480" src="screens/fragfrag-concept.png">
+</p>
 
 ## How to organize the files
 Create a new directory, e.g. `project`, with a `template` subdirectory in it and a `files\src` subdirectory structure as well. Copy your `index.html` template file in the `template` subdirectory.
@@ -40,7 +42,9 @@ Run `AutoHotkeyU32.exe c:\fragfrag\template.ahk c:\project` to generate a `c:\pr
 You can also run `AutoHotkeyU32.exe c:\fragfrag\gui.ahk`, choose the working `c:\project` directory path, select the `template` option from the script list and press the `Run` button.
 You can also copy `AutoHotkeyU32.exe` as `c:\fragfrag\gui.exe` and duble click `gui.exe`. It will run `gui.ahk` by default.
 
-![fragfrag gui](screens/fragfrag-gui.png "fragfrag gui")
+<p align="center">
+  <img width="602" height="475" src="screens/fragfrag-gui.png">
+</p>
 
 ### U64
 You can use `AutoHotkeyU64.exe` instead, if you want.
@@ -57,4 +61,6 @@ Optionally, add new numbered fragments in between the existing fragments, if the
 ### Reassemble
 Run `AutoHotkeyU32.exe c:\fragfrag\files.ahk c:\project` to generate a `dist` directory and new `index.html` files, using the template fragments, and the modified or added fragments in the `_fragfrag` directory from each subdirectory in `c:\project\files\src`.
 
-![fragfrag gui](screens/fragfrag-gui-files.png "fragfrag gui")
+<p align="center">
+  <img width="602" height="475" src="screens/fragfrag-gui-files.png">
+</p>
