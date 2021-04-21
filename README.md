@@ -17,6 +17,8 @@ Split a file into fragments. Copy some of those fragments to a new location and 
 ## How to organize the files
 Create a new directory, e.g. `project`, with a `template` subdirectory in it and a `files\src` subdirectory structure as well. Copy your `index.html` template file in the `template` subdirectory.
 
+For the following documentation, it is assumed that `fragfrag` has been copied to `c:\fragfrag` and the project directory is `c:\project`.
+
 ## How to split the template into fragments
 ### Fragmentation points
 Define fragmentation points in the `index.html` template file: insert `fragfrag(number_description)` lines in the template file. This is up to you, you set the rules of fragmentation. `number` is required. Any numbered sequences will do, but keep an ascending order. `description` is not required but may be really useful with recognizing the content in the file fragment.
@@ -29,12 +31,11 @@ I use hundreds as stepping points from the previous context: 100, 200 and so on.
 If contexts are nested, then for the outer nested context it's not possible to use the same hundreds for its end. So I just step up on the hundreds to point out the new context switch, from the inner context to the outer context, and then put directly the ninety: e.g. [110 [210 220 290] 390].
 
 ### Fragmentate
-Run `AutoHotkeyU32.exe path/to/fragfrag/template.ahk path/to/project` to generate a `_fragfrag` directory and the file fragments from the template file.
+Run `AutoHotkeyU32.exe c:\fragfrag\template.ahk c:\project` to generate a `c:\project\template\_fragfrag` directory and the file fragments from the template file.
 
 ### GUI
-You can also run `AutoHotkeyU32.exe path/to/fragfrag/gui.ahk`, choose the working `project` directory path, select the `template` option from the script list and press the `Run` button.
-
-You can also copy `AutoHotkeyU32.exe` as `path/to/fragfrag/gui.exe` and duble click `gui.exe`. It will run `gui.ahk` by default.
+You can also run `AutoHotkeyU32.exe c:\fragfrag\gui.ahk`, choose the working `c:\project` directory path, select the `template` option from the script list and press the `Run` button.
+You can also copy `AutoHotkeyU32.exe` as `c:\fragfrag\gui.exe` and duble click `gui.exe`. It will run `gui.ahk` by default.
 
 ![fragfrag gui](fragfrag-gui.png "fragfrag gui")
 
@@ -43,7 +44,7 @@ You can use `AutoHotkeyU64.exe` instead, if you want.
 
 ## How to reassemble fragments into different files
 ### Copy, modify, add fragments
-Copy file fragments that will differ in content from the fragments in the template file, to `_fragfrag` locations in `path/to/project/files/scr` directory. For example, to `path/to/project/files/src/_fragfrag` for the root `index.html` file and `path/tp/project/files/src/about/_fragfrag` for the `about/index.html` file.
+Copy file fragments that will differ in content from the fragments in the template file, to `_fragfrag` locations in `c:\project\files\src` directory. For example, to `c:\project\files\src\_fragfrag` for a root `c:\project\files\dist\index.html` file and `c:\project\files\src\about\_fragfrag` for a `c:\project\files\dist\about\index.html` file.
 
 Add/remove content to fragments. This is, again, up to you. You control the rules of fragmentation, so you control the rules of substitution as well.
 
@@ -51,6 +52,6 @@ Add/remove content to fragments. This is, again, up to you. You control the rule
 Optionally, add new numbered fragments in between the existing fragments, if the fragments from the template file are not fit for the content you wish to add.
 
 ### Reassemble
-Run `AutoHotkeyU32.exe path/to/fragfrag/files.ahk path/to/project` to generate a `dist` directory and new `index.html` files, using the template fragments, and the modified or added fragments in the `_fragfrag` directory from each subdirectory in `files/src`.
+Run `AutoHotkeyU32.exe c:\fragfrag\files.ahk c:\project` to generate a `dist` directory and new `index.html` files, using the template fragments, and the modified or added fragments in the `_fragfrag` directory from each subdirectory in `c:\project\files\src`.
 
 ![fragfrag gui](fragfrag-gui-files.png "fragfrag gui")

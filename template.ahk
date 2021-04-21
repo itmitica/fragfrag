@@ -33,7 +33,7 @@ if vStepsTemplate["3_templatefileexists"] {
     {
         if InStr(A_LoopReadLine, vCutPrefix) {
             FileName := vTemplateTokenDir
-                . RTrim(StrReplace(A_LoopReadLine, vCutPrefix, ""), vCutSuffix)
+                . RTrim(LTrim(StrReplace(A_LoopReadLine, " ", ""), vCutPrefix), vCutSuffix)
                 . vFileExt
             FileAppend, , %FileName%
         }
