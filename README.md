@@ -13,7 +13,7 @@ How do I break a template file into pieces and use those pieces to assemble othe
 Check the `samples` directory.
 
 ## The workflow
-Split a file into fragments. Copy some of those fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location. Repeat to create as many files are needed using the template fragments.
+Split a file into fragments. Copy some of those fragments to a new location and modify them. Reassemble original fragments and modified fragments into a new file at the new location. Repeat to create as many files are needed.
 
 <p align="center">
   <img width="480" height="480" src="screens/fragfrag-concept.png">
