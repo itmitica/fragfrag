@@ -1,4 +1,4 @@
-# ![fragfrag logo](screens/fragfrag-logo.png "fragfrag logo") fragfrag
+# ![fragfrag logo](screens/fragfrag-logo.png "fragfrag logo")ragfrag
 
 ## The problem
 How do I break a template file into pieces and use those pieces to assemble other files?
